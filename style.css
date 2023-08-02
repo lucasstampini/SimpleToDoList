@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root {
+    --main--font: 'Poppins', sans-serif;
+    --main--color: #444184;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+body {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main{
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 5rem;
+    margin: 16px;
+    font-family: var(--main--font);
+    font-weight: 700;
+}
+
+.container {
+    background-color: white;
+    margin: 24px;
+    padding: 24px; 
+    box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.37);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#addToDo {
+    padding: 8px 24px;
+    width: 17rem;
+    border: solid 1px;
+    border-color: var(--main--color);
+}
+
+#addToDo::placeholder {
+    color: var(--main--color);
+}
+
+#plusButton{
+    padding: 8px 24px;
+    border: solid 1px;
+    background-color: white;
+    border-color: var(--main--color);
+    color: var(--main--color);
+}
+
+#plusButton:hover {
+    background-color: var(--main--color);
+    color: white;
+    cursor: pointer;
+}
+
+.task {
+    font-family: var(--main--font);
+    font-size: 1.5rem;
+    color: var(--main--color);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.tick {
+    padding: 8px 24px;
+    border: solid 1px;
+    background-color: white;
+    border-color: rgb(0, 201, 0);
+    color: rgb(0, 201, 0);
+    margin-inline: 8px;
+}
+
+.tick:hover {
+    background-color: rgb(0, 201, 0);
+    color: white;
+    cursor: pointer;
+}
+
+.erase {
+    padding: 11px 26px;
+    border: solid 1px;
+    background-color: white;
+    border-color:rgb(236, 12, 12) ;
+    color: rgb(236, 12, 12);
+}
+
+.erase:hover {
+    background-color: rgb(236, 12, 12);
+    color: white;
+    cursor: pointer;
+}
+
+.container-tasks {
+    height: 150px;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 480px) {
+    #addToDo {
+        width: 13rem;
+    }
+
+    .container-tasks {
+        margin: 24px;
+    }
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #444184;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
